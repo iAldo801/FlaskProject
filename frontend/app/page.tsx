@@ -2,9 +2,13 @@
 
 import { useEffect, useState } from "react";
 
+interface Data {
+  message: string;
+}
+
 export default function Home() {
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<Data>();
 
   useEffect(() => {
     const fetchData = async () => {

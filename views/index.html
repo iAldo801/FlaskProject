@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -8,9 +9,12 @@
 </head>
 
 <body>
-    <h1>
-        Sup, Flask?
-    </h1>
+    <h1>Sup, Flask?</h1>
+    <ul>
+        {% for endpoint, url in routes %}
+        <li><a href="{{ url_for(endpoint) }}">{{ endpoint }}</a></li>
+        {% endfor %}
+    </ul>
 </body>
 
 </html>

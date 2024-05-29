@@ -6,6 +6,7 @@ import psycopg2
 login_blueprint = Blueprint("login", __name__)
 conn = get_db_connection()
 
+
 @login_blueprint.route("/auth/login", methods=["GET", "POST"])
 def loginRoute():
     if request.method == 'POST':
